@@ -45,11 +45,11 @@
   padding: 10px 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 .sub-main-cont {
-  width: 50%;
+  width: 60%;
   height: 90%;
   background-color: whitesmoke;
   padding: 20px 5px;
@@ -57,7 +57,7 @@
   padding: 10px 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   border-radius: 5px;
 }
