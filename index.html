@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My HNG Profile</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <!--top of the page-->
+      <div class="top-cont">
+        
+        <div class="disp-img">
+     <img src="Abdullateef Dauda.jpg" alt="ABDULLATEEF DAUDA" />
+    </div>
+      </div>
+
+      <!--main body-->
+      <div class="main-cont">
+        <div class="sub-main-cont">
+        <div class="main-cont-1">
+          <label for="slackUserName">Slack Username</label>
+          <input
+            type="button"
+            data-testid="slackUserName"
+            value="Abdullateef Dauda"
+          />
+        </div>
+        <div class="main-cont-1">
+          <label for="currentDayOfTheWeek">Current Day of the week</label>
+          <input
+            type="button"
+            data-testid="currentDayOfTheWeek"
+            value="Sunday"
+          />
+        </div >
+        <div class="main-cont-1">
+          <label for="currentUTCTime">Current UTC time</label>
+          <span id="currentUTCTime" data-testid="currentUTCTime"></span>
+         
+        </div>
+        <div class="main-cont-1">
+          <label for="track">Track</label>
+          <input type="button" data-testid="myTrack" value="Frontend" />
+        </div>
+        <div class="main-cont-1">
+          <label for="githubURL">Github URL </label>
+          <a href="https://github.com/abdul-o" target="_blank"
+            ><input
+              type="button"
+              data-testid="githubURL"
+              value="Github Repository"
+          /></a>
+        </div>
+    </div>
+      </div>
+
+      <!--footer-->
+      <div class="foot-cont"></div>
+    </div>
+    
+    <script>
+      // create a function to update the date and time
+      function updateDateTime() {
+        // create a new `Date` object
+
+        const now = new Date();
+
+        // get the current date and time as a string
+        const currentDateTime = now.toLocaleString();
+
+        // update the `textContent` property of the `span` element with the `id` of `datetime`
+        document.querySelector('#currentUTCTime').textContent = currentDateTime;
+      }
+
+      // call the `updateDateTime` function every second
+      setInterval(updateDateTime, 1000);
+    </script>
+    <script src=></script>
+  </body>
+</html>
