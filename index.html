@@ -7,77 +7,24 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <div class="wrapper">
-
-      <!--top of the page-->
-      <div class="top-cont">
-        
-        <div class="disp-img">
-     <img src="Abdullateef Dauda.jpg" alt="ABDULLATEEF DAUDA" data-testid="slackDisplayImage"/>
-    </div>
+      <div class="cont">
+        <p class="real-time-data" data-testid="slackUserName">ABDULLATEEF DAUDA</p>
+        <img src="./Abdullateef Dauda.jpg" alt="ABDULLATEEF DAUDA" data-testid="slackDisplayImage">
+        <p class="real-time-data" data-testid="currentDayOfTheWeek">Monday</p>
+        <p class="real-time-data" data-testid="currentUTCTime" id="currentUTCTime"></p>
+        <p class="real-time-data" data-testid="myTrack">Frontend</p>
+        <a class="real-time-data" href="https://github.com/abdul-o/Hngx-stage-one-task" target="_blank" data-testid="githubURL">Github Repository Link</a>
       </div>
-
-      <!--main body-->
-      <div class="main-cont">
-        <div class="sub-main-cont">
-        <div class="main-cont-1">
-        
-          <input
-            type="button"
-            data-testid="slackUserName"
-            value="Abdullateef Dauda"
-          />
-        </div>
-        <div class="main-cont-1">
-
-          <input
-            type="button"
-            data-testid="currentDayOfTheWeek"
-            value="Sunday"
-          />
-        </div >
-        <div class="main-cont-1">
-          
-          <span id="currentUTCTime" data-testid="currentUTCTime"></span>
-         
-        </div>
-        <div class="main-cont-1">
-          
-          <input type="button" data-testid="myTrack" value="Frontend" />
-        </div>
-        <div class="main-cont-1">
-        
-          <a href="https://github.com/abdul-o/Hngx-stage-one-task" target="_blank"
-            ><input
-              type="button"
-              data-testid="githubURL"
-              value="Github Repository"
-          /></a>
-        </div>
-    </div>
-      </div>
-
-      <!--footer-->
-      <div class="foot-cont"></div>
-    </div>
     
     <script>
-      // create a function to update the date and time
-      function updateDateTime() {
-        // create a new `Date` object
+      function updateTime() {
+   let currentTime = new Date();
+   let currentTimeMillis = currentTime.getTime();
+   let currentUTCTime = currentTime.toUTCString();
 
-        const now = new Date();
-
-        // get the current date and time as a string
-        const currentDateTime = now.toLocaleString();
-
-        // update the `textContent` property of the `span` element with the `id` of `datetime`
-        document.querySelector('#currentUTCTime').textContent = currentDateTime;
-      }
-
-      // call the `updateDateTime` function every second
-      setInterval(updateDateTime, 1000);
-    </script>
-    <script src=></script>
+   document.querySelector('#currentUTCTime').textContent = currentUTCTime;
+};
+setInterval(updateTime, 1000); // Run updateTime() every second
+</script>
   </body>
 </html>
